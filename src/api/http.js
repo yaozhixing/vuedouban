@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from './api'
 import qs from 'qs'
 
 const mhttp = {

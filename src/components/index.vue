@@ -3,6 +3,7 @@
         <index-hot/>
         <p class="p-space"></p>
         <index-soon/>
+        <p style="height: 2rem"></p>
     </div>
 </template>
 

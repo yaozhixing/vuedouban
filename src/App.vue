@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <header-top/>
+    <loading v-if="isloading"/>
     <router-view/>
     <foot-bar/>
   </div>
@@ -20,12 +21,22 @@ window.addEventListener(change, setRem, false);
 
 import headerTop from "./components/headertop"
 import footBar from "./components/footbar"
+import loading from "./components/loading"
+import { mapState, mapGetters } from "vuex"
 
 export default {
   name: 'App',
   components:{
     headerTop,
-    footBar
+    footBar,
+    loading
+  },
+  //计算loading状态，所以用computed
+  computed:{
+    ...mapGetters({
+        //左边是状态，右边是getters的函数名
+        isloading: 'changeLoad'
+    })
   }
 }
 
