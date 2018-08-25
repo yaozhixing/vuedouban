@@ -8,13 +8,6 @@ import "@/assets/css/wap.less";
 
 Vue.config.productionTip = false
 
-// Vue.directive('title', {
-//   inserted: function (el, binding) {
-//     document.title = el.dataset.title
-// 		document.getElementById('headtitle').innerText = document.title
-//   }
-// })
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

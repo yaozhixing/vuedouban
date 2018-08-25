@@ -6,7 +6,7 @@
                 <div class="mov-cs">
                     <div class="score-ctn">评分：{{score}}</div>
                     <p class="pl">{{reviews_count}}人评价</p>
-                    <div class="mov-des"> {{genres}}  / {{directors}} / {{countries}} 上映</div>
+                    <div class="mov-des"> {{genres}}  {{directors}}  {{casts}} / {{countries}} 上映</div>
                 </div>
                 <div class="mov-img"><img :src="img" :alt="title"></div>
             </section>
@@ -25,9 +25,9 @@
 </template>
 
 <script>
-    import axios from 'axios'
-
     import recomMovie from "./recommovie"
+    //import axios from 'axios'
+    import {getMovieSubject} from "../api/common"
 
     export default {
         components:{
@@ -54,6 +54,7 @@
                 score:0,
                 directors:'',
                 countries:'',
+                casts:'',
                 img:'',
                 wish_count:0,
                 collect_count:0,
@@ -64,25 +65,40 @@
         methods:{
             getsubject(){
                 this.id = this.$route.params.id;
-                axios.get("/api/movie/subject/" + this.id)
+                getMovieSubject(this.id)
                 .then((res)=>{
-                    console.log(res.data)
+                    console.log(res)
                     this.info = res.data
                     this.alt = this.info.alt
                     this.title = this.info.title
                     this.score = this.info.rating.average
                     this.reviews_count = this.info.reviews_count
-                    this.directors = this.info.directors[0].name + "(导演)"
-                    this.countries = this.info.countries[0]
+                    this.directors = this.getcarts(this.info.directors) + "(导演)"
+                    this.genres = this.getgenres(this.info.genres)
+                    this.casts = this.getcarts(this.info.casts)
                     this.img = this.info.images.large
                     this.wish_count = this.info.wish_count
                     this.collect_count = this.info.collect_count
-                    this.genres = this.info.genres[0] + " " + this.info.genres[1]
                     this.summary = this.info.summary
+                    this.countries = this.getgenres(this.info.countries)
                 })
                 .catch((error)=>{
                     console.log(error)
                 })
+            },
+            getgenres(arr){
+                let str ="";
+                arr.forEach(function(v){
+                    str += " " + v;
+                })
+                return str;
+            },
+            getcarts(arr){
+                let str ="";
+                arr.forEach(function(n,i,arr){
+                    str += " / " + arr[i]['name'];
+                })
+                return str;
             }
         }
     }

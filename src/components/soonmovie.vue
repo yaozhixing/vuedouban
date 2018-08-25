@@ -11,7 +11,7 @@
 
 <script>
     import movieItem from './movieitem'
-    import axios from 'axios'
+    import {getSoonList} from "../api/common"
 
     export default {
         name:"soonmovie",
@@ -25,7 +25,7 @@
             }
         },
         created(){
-            axios.get("/api/movie/coming_soon")
+            getSoonList()
             .then((res)=>{
                 console.log(res);
                 this.soondata = res.data.subjects;

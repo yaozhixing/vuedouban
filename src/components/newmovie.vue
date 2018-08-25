@@ -11,7 +11,7 @@
 
 <script>
     import movieItem from './movieitem'
-    import axios from 'axios'
+    import {getNewList} from "../api/common"
 
     export default {
         name:"newmovie",
@@ -25,7 +25,7 @@
             }
         },
         created(){
-            axios.get("/api/movie/new_movies")
+            getNewList()
             .then((res)=>{
                 console.log(res);
                 this.newdata = res.data.subjects;

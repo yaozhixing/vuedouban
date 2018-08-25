@@ -12,7 +12,7 @@
 
 <script>
     import movieItem from "./movieitem"
-    import axios from "axios"
+    import {getHotList} from "../api/common"
 
     export default {
         name:"indexhot",
@@ -27,7 +27,7 @@
             }
         },
         created(){
-            axios.get("/api/movie/in_theaters")
+            getHotList()
             .then( (res)=>{
                 console.log(res);
                 this.hotdata = res.data.subjects.splice(0,6)

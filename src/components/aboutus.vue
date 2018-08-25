@@ -16,14 +16,28 @@
                 <li>4、有良好的网站命名规范和指定文档规范；</li>
                 <li>5、独立配置webpack,gulp,掌握vuejs，requiejs，jquery等主流开发框架和库，熟悉组件化开发；</li>
                 <li>6、了解nodejs开发，熟悉express开发框架，独立搭建过爬虫，聊天室</li>
+                <li>7、聊天室演示地址：<a href="https://chatnice.herokuapp.com/">https://chatnice.herokuapp.com/</a></li>
             </ul>
         </div>
     </div>
 </template>
 
 <script>
+    import {getHotList} from "../api/common";
+
     export default {
-        name:"aboutus"
+        name:"aboutus",
+        created(){
+
+            getHotList()
+            .then( res => {
+                console.log(res)
+            })
+            .catch( error =>{
+                console.log(error)
+            })
+            
+        }
     }
 </script>
 

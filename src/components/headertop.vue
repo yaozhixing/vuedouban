@@ -1,21 +1,14 @@
 <template>
     <div class="p-head">
+        <div class="logo"><router-link to="/"><img src="@/assets/images/common/logo.png"></router-link></div>
         <h2 class="phead-tit" id="headtitle">{{title}}</h2>
+        <i></i>
     </div>
 </template>
 
 <script>
     export default {
         name:"headertop",
-        /*beforeRouteEnter(to,from,next){
-            next((vm)=>{
-                vm.title = to.meta.title
-            });
-        },
-        beforeRouteUpdate(to,from,next){
-            this.title = to.meta.title
-            next();
-        },*/
         watch:{
             $route(){
                 this.title = this.$route.meta.title

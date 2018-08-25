@@ -12,6 +12,7 @@
 
 <script>
     import movieItem from "./movieitem"
+    import {getSoonList} from "../api/common"
 
     import axios from "axios"
 
@@ -28,14 +29,14 @@
             }
         },
         created(){
-            axios.get("/api/movie/coming_soon")
+            getSoonList()
             .then( (res)=>{
                 //console.log(res);
                 this.hotdata = res.data.subjects.splice(0,6)
             })
             .catch( (error)=>{
                 console.log(error)
-            } )
+            })
         }
 
     }

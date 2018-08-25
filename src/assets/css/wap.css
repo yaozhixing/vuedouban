@@ -461,6 +461,8 @@ img.imgevent {
 /*----------------------------------------------common.css(头部，标题，底部)------------------------------------------*/
 /*头部*/
 .p-head {
+  display: flex;
+  display: -webkit-flex;
   width: 100%;
   height: 1.76rem;
   position: fixed;
@@ -468,6 +470,8 @@ img.imgevent {
   left: 0;
   z-index: 100;
   background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
 }
 .p-head:after {
   width: 100%;
@@ -492,11 +496,13 @@ img.imgevent {
   transform: scaleY(0.5);
 }
 .p-head .phead-tit {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
   line-height: 1.76rem;
   text-align: center;
   font-size: 0.72rem;
   color: #333;
-  font-weight: 700;
 }
 .p-head .phead-back {
   width: 1.76rem;
@@ -507,6 +513,17 @@ img.imgevent {
   left: 0;
   background: url("../images/common/phead-back.png") center center no-repeat;
   background-size: 1rem 1rem;
+}
+.p-head .logo {
+  width: 2rem;
+  margin-left: 0.6rem;
+}
+.p-head .logo img {
+  width: 100%;
+}
+.p-head i {
+  width: 2rem;
+  margin-right: 0.6rem;
 }
 /*foot*/
 .footbar {

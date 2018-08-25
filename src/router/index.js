@@ -95,7 +95,6 @@ let router =  new Router({
 router.beforeEach( (to,from,next)=>{
   let titlename = to.meta.title;
   document.title = titlename;
-  //document.getElementById("headtitle").innerText = titlename
   next()
 } )
 

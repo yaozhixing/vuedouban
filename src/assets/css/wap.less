@@ -296,6 +296,7 @@ img.imgevent{pointer-events: none;}
 /*----------------------------------------------common.css(头部，标题，底部)------------------------------------------*/
 /*头部*/
 .p-head{
+    .display(f);
     .width(100%);
     .height(88/@rem);
     .position(f);
@@ -303,6 +304,8 @@ img.imgevent{pointer-events: none;}
     .left;
     .z-index(100);
     .bg(#fff);
+    justify-content: space-between;
+    align-items: center;
     &:after{
         .after(b,1px,@bcolor);
     }
@@ -312,11 +315,11 @@ img.imgevent{pointer-events: none;}
         }
     }
     .phead-tit{
+        .flex;
         .lineh(88/@rem);
         .tc;
         .fs(36/@rem);
         .color(@acolor2);
-        .bold(700);
     }
     .phead-back{
         .width(88/@rem);
@@ -328,7 +331,19 @@ img.imgevent{pointer-events: none;}
         .bgtra("../images/common/phead-back.png",center,center);
         background-size: 50/@rem 50/@rem;
     }
+    .logo{
+        .w(100/@rem);
+        .ml(30/@rem);
+        img{
+            .w;
+        }
+    }
+    i{
+        .w(100/@rem);
+        .mr(30/@rem);
+    }
 }
+
 
 /*foot*/
 .footbar{

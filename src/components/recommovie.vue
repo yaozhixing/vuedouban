@@ -11,7 +11,7 @@
 
 <script>
     import movieItem from "./movieitem"
-    import axios from "axios"
+    import {getRecomList} from "../api/common"
 
     export default {
         name:"indexhot",
@@ -26,7 +26,7 @@
             }
         },
         created(){
-            axios.get("/api/movie/top250")
+            getRecomList()
             .then( (res)=>{
                 //console.log(res);
                 this.likedata = res.data.subjects
