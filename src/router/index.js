@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Index from '@/components/index'
 import Hotmovie from '@/components/hotmovie'
 import Soonmovie from '@/components/soonmovie'
-import Newmovie from '@/components/newmovie'
+import Americamovie from '@/components/americamovie'
 import Aboutus from '@/components/aboutus'
 import Subject from '@/components/subject'
 import Notfind from '@/components/404'
@@ -35,24 +35,24 @@ let router =  new Router({
       }
     },
 
-    //即将上映
+    //即将上线
     {
       path:'/soonmovie',
       name: 'Soonmovie',
       component: Soonmovie,
       meta:{
-        title:"即将上映",
+        title:"即将上线",
         footbar:false
       }
     },
 
-    //新片榜
+    //北美票房榜
     {
-      path:'/newmovie',
-      name: 'Newmovie',
-      component: Newmovie,
+      path:'/americamovie',
+      name: 'Americamovie',
+      component: Americamovie,
       meta:{
-        title:"新片速递",
+        title:"北美票房榜",
         footbar:false
       }
     },

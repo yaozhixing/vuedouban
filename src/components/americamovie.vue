@@ -4,14 +4,14 @@
             <span class="title">{{title}}</span>
         </div>
         <div class="lay-main">
-            <movie-item class="hotbox"  v-for="item in newdata" :key="item.id" :imgsrc="item.images.large" :id="item.id" :title="item.title" :score="item.rating.average"/>
+            <movie-item class="hotbox"  v-for="item in americadata" :key="item.id" :imgsrc="item.subject.images.large" :id="item.subject.id" :title="item.subject.title" :score="item.subject.rating.average"/>
         </div>
     </div>
 </template>
 
 <script>
     import movieItem from './movieitem'
-    import {getNewList} from "../api/common"
+    import {getAmericaList} from "../api/common"
 
     export default {
         name:"newmovie",
@@ -20,15 +20,15 @@
         },
         data(){
             return{
-                title: "新片上映",
-                newdata:{}
+                title: "北美票房榜",
+                americadata:{}
             }
         },
         created(){
-            getNewList()
+            getAmericaList()
             .then((res)=>{
                 console.log(res);
-                this.newdata = res.data.subjects;
+                this.americadata = res.data.subjects;
             })
         }
     }

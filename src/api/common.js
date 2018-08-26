@@ -10,9 +10,9 @@ export const getSoonList = (params) => {
     return mhttp.get("/api/movie/coming_soon",params)
 }
 
-/*最新电影*/
-export const getNewList = (params) => {
-    return mhttp.get("/api/movie/new_movies",params)
+/*北美票房榜*/
+export const getAmericaList = (params) => {
+    return mhttp.get("/api/movie/us_box",params)
 }
 
 /*电影推荐*/
