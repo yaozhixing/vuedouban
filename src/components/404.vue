@@ -11,5 +11,8 @@
 </script>
 
 <style scoped>
-
+	h2{
+		margin-top:5rem;
+		text-align:center;
+	}
 </style>

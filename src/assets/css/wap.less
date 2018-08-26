@@ -416,6 +416,77 @@ img.imgevent{pointer-events: none;}
     }
 }
 
+/*--------------------------------骨架层------------------------------------*/
+.p-skeleton{
+    .w;
+    .bg(#fff);
+    .padding(35/@rem,35/@rem,35/@rem,35/@rem);
+    .position(f);
+    .top(88/@rem);
+    .left;
+    .ske-head{
+        .w;
+        .display(f);
+        justify-content: space-between;
+        .s-headimg{
+            .w(31%);
+            .h(280/@rem);
+            .bg(@imgbg);
+            .mr(30/@rem)
+        }
+        .s-headctn{
+            .display(f);
+            .flex;
+            flex-direction:column;
+            //align-items: center;
+            justify-content:center;
+            .h(280/@rem);
+            p{
+                .h(36/@rem);
+                .bg(@imgbg);
+                .mb(30/@rem);
+                &:last-child{
+                    .mb(0)
+                }
+            }
+            .cp1{ animation: skewidth1 1.2s linear infinite}
+            .cp2{ animation: skewidth2 .8s linear infinite}
+            .cp3{ animation: skewidth3 1s linear infinite}
+            .cp4{ animation: skewidth4 .9s linear infinite}
+        }
+    }
+    .ske-p2{
+        .mt(30/@rem);
+        p{
+            .h(36/@rem);
+            .bg(@imgbg);
+            .mb(30/@rem);
+            &:last-child{
+                .mb(0)
+            }
+        }
+    }
+    .ske-list{
+        .display(f);
+        .mt(30/@rem);
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .ske-l{
+            .w(31%);
+            .h(280/@rem);
+            .mb(30/@rem);
+            .bg(@imgbg)
+        }
+        
+    }
+}
+
+@-webkit-keyframes skewidth1 { 0% { width:40% } 50% { width:100% } 100% { width:40% }}
+@-webkit-keyframes skewidth2 { 0% { width:70% } 50% { width:100% } 100% { width:70% }}
+@-webkit-keyframes skewidth3 { 0% { width:40% } 50% { width:100% } 100% { width:40% }}
+@-webkit-keyframes skewidth4 { 0% { width:50% } 50% { width:100% } 100% { width:50% }}
+
+/*--------------------------------首页--------------------------------------*/
 /*首页*/
 .laybox{
     .margin(35/@rem,35/@rem,35/@rem,35/@rem);

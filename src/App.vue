@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header-top/>
-    <loading v-if="isloading"/>
+    <skeleton v-if="isloading"/>
     <router-view/>
     <foot-bar/>
   </div>
@@ -21,15 +21,16 @@ window.addEventListener(change, setRem, false);
 
 import headerTop from "./components/headertop"
 import footBar from "./components/footbar"
-import loading from "./components/loading"
 import { mapState, mapGetters } from "vuex"
+import skeleton from "./components/skeleton"    //加载骨架层-首选方案
+// import loading from "./components/loading"   loading备用方案
 
 export default {
   name: 'App',
   components:{
     headerTop,
     footBar,
-    loading
+    skeleton
   },
   //计算loading状态，所以用computed
   computed:{
