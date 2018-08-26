@@ -15,32 +15,31 @@
         data(){
         	return{
         		sco: this.score,
-        		zsco: 0,
         		scorecurr: this.getscroe(this.score),
         		scostate: this.getscoreState(this.score)
         	}
         },
         methods:{
         	getscroe(num){
-        		this.zsco = Math.round(num);
-        		if( this.zsco > 0 && this.zsco <=2 ){
+        		let zsco = Math.round(num);
+        		if( zsco > 0 && zsco <=2 ){
         			return "sco1";
         		}
-        		else if( this.zsco > 2 && this.zsco <= 4 ){
+        		else if( zsco > 2 && zsco <= 4 ){
         			return "sco2";
         		}
-        		else if( this.zsco > 4 && this.zsco <= 6 ){
+        		else if( zsco > 4 && zsco <= 6 ){
         			return "sco3";
         		}
-        		else if( this.zsco > 6 && this.zsco <= 8 ){
+        		else if( zsco > 6 && zsco <= 8 ){
         			return "sco4";
         		}
-        		else if( this.zsco > 8 && this.zsco <= 10 ){
+        		else if( zsco > 8 && zsco <= 10 ){
         			return "sco5";
         		}
         	},
         	getscoreState(num){
-        		return num == 0 ? flase : true;
+                return num == 0 ? false : true;
         	}
         }
     }
