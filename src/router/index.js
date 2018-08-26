@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/components/index'
-import Hotmovie from '@/components/hotmovie'
-import Soonmovie from '@/components/soonmovie'
-import Americamovie from '@/components/americamovie'
-import Aboutus from '@/components/aboutus'
-import Subject from '@/components/subject'
-import Notfind from '@/components/404'
+import Index from '@/components/index'                //首页
+import Hotmovie from '@/components/hotmovie'          //正在热映  列表
+import Soonmovie from '@/components/soonmovie'        //即将上映  列表
+import Americamovie from '@/components/americamovie'  //北美票房榜列表
+import Aboutus from '@/components/aboutus'            //关于我
+import Subject from '@/components/subject'            //电影内容页
+import Notfind from '@/components/404'                //404
 
 Vue.use(Router)
 
