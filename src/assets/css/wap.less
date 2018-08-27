@@ -14,7 +14,7 @@
 @bgf6f6f6:#f6f6f6;
 @none:none;
 @n0:0;
-@comcolor:#f95458;
+@comcolor:#42bd56;
 @comcolor2:#4b9bd6;
 @comcolor3:#75bf72;
 @rem: 50rem;
@@ -365,7 +365,10 @@ img.imgevent{pointer-events: none;}
     .fbar-item{
         .flex;
         .padding(10/@rem,0,5/@rem,0);
-        &.fbar-title{
+        &.router-link-exact-active.curr{
+            .fbar-title{
+                .color(@comcolor);
+            }
             .color(@comcolor);
         }
         .fbar-ico{
@@ -380,38 +383,6 @@ img.imgevent{pointer-events: none;}
             .color(@acolor);
             .lineh(inherit);
             .tc;
-        }
-        .fbar-ico1{
-            // background: url(../images/common/footico1.png) no-repeat;
-            // background-size: 54/@rem 54/@rem;
-        }
-        &.curr .footbar-ico1{
-            // background: url(../images/common/footico1-curr.png) no-repeat;
-            // background-size: 54/@rem 54/@rem;
-        }
-        .fbar-ico2{
-            // background: url(../images/common/footico2.png) no-repeat;
-            // background-size: 54/@rem 54/@rem;
-        }
-        &.curr .footbar-ico2{
-            // background: url(../images/common/footico2-curr.png) no-repeat;
-            // background-size: 54/@rem 54/@rem;
-        }
-        .fbar-ico3{
-            // background: url(../images/common/footico3.png) no-repeat;
-            // background-size: 54/@rem 54/@rem;
-        }
-        &.curr .footbar-ico3{
-            // background: url(../images/common/footico3-curr.png) no-repeat;
-            // background-size: 54/@rem 54/@rem;
-        }
-        .fbar-ico4{
-            // background: url(../images/common/footico4.png) no-repeat;
-            // background-size: 54/@rem 54/@rem;
-        }
-        &.curr .footbar-ico4{
-            // background: url(../images/common/footico4-curr.png) no-repeat;
-            // background-size: 54/@rem 54/@rem;
         }
     }
 }
