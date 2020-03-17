@@ -1,13 +1,16 @@
 
-##仿豆瓣网用Vue制作H5移动端
-###技术栈：Vue + vue-cli + vue-router + vuex
+## 仿豆瓣网用Vue制作H5移动端
 
+## 技术栈   
+Vue + vue-cli + vue-router + vuex
 
-##演示地址：https://dbnice.herokuapp.com/
-####用的是豆瓣电影网公开api接口，地址是：https://developers.douban.com/wiki/?title=movie_v2
+## 演示地址   
+https://dbnice.herokuapp.com/   
 
+## 公开api接口   
+地址：https://developers.douban.com/wiki/?title=movie_v2
 
-##页面如下：
+## 页面如下：
 * 首页
 * 正在热映
 * 即将上映
@@ -16,7 +19,7 @@
 * 关于我
 * 404
 
-##有问题反馈
+## 技术要点
 
 * vue-router管理路由
 * 父子组件传递参数 
